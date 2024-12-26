@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+</head>
+<body style="background-color: gray; color:bisque;">
+    <h1>Hello World</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+    let intervalId;
+
+    start.addEventListener('click', () => {
+        intervalId = setInterval( () => { 
+            console.log(Date.now())
+        },2000)
+
+    })
+
+    stop.addEventListener('click', () => {
+        clearInterval(intervalId)
+
+    })
+
+
+</script>
+</html>
